@@ -1,0 +1,6 @@
+png("plot3.png")
+plot(subset_hec$DateTimePosixct, subset_hec$Sub_metering_1 ,type="l", ylim=c(0,30), xlab="", ylab = "Energy sub metering")
+lines(subset_hec$DateTimePosixct, subset_hec$Sub_metering_2 , col= "red", type="l")
+lines(subset_hec$DateTimePosixct, subset_hec$Sub_metering_3 , col= "blue", type="l")
+legend("topright", col=c("black","red","blue"), c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=c(1,1,1), lwd=c(1,1,1))
+dev.off()
